@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginPage extends StatefulWidget {
   @override
-  _LoginPageState createState() => _LoginPageState();
+  LoginPageState createState() => LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
@@ -83,19 +82,6 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                child: Align(
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Forget password?',
-                    style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 15.0,
-                        color: Colors.red),
-                  ),
-                ),
-              ),
               SizedBox(
                 height: 40.0,
               ),
@@ -105,6 +91,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(50.0),
                   child: Container(
+                    padding: EdgeInsets.all(15.0),
                     decoration: BoxDecoration(
                       color: Colors.red,
                       boxShadow: [
@@ -115,14 +102,13 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ],
                     ),
-                    height: 75.0,
                     width: MediaQuery.of(context).size.width,
                     child: Center(
                       child: Text(
                         'Login',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 20.0,
+                          fontSize: 16.0,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
@@ -133,43 +119,6 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(
                 height: 30.0,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 70.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    FloatingActionButton(
-                      onPressed: () {},
-                      backgroundColor: Colors.white,
-                      elevation: 10.0,
-                      child: Icon(
-                        FontAwesomeIcons.google,
-                        color: Colors.red,
-                      ),
-                    ),
-                    FloatingActionButton(
-                      onPressed: () {},
-                      backgroundColor: Colors.white,
-                      elevation: 10.0,
-                      child: Icon(
-                        FontAwesomeIcons.facebookF,
-                        color: Colors.blueAccent,
-                      ),
-                    ),
-                    FloatingActionButton(
-                      onPressed: () {},
-                      backgroundColor: Colors.white,
-                      elevation: 10.0,
-                      child: Icon(
-                        FontAwesomeIcons.twitter,
-                        color: Colors.lightBlueAccent,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
               SizedBox(
                 height: 40.0,
               ),
@@ -178,24 +127,22 @@ class _LoginPageState extends State<LoginPage> {
                   horizontal: 40.0,
                 ),
                 child: RichText(
-                  text: TextSpan(text: 'Don\'t have an account?',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 18.0,
-                    color: Colors.black,
-                  ),
-                    children: [
-                      TextSpan(
-                        text: 'Sign up',
-                        style: TextStyle(
-                          decoration: TextDecoration.underline,
-                          fontWeight: FontWeight.w400,
-                          fontSize: 18.0,
-                          color: Colors.black
-                        )
-                      )
-                    ]
-                  ),
+                  text: TextSpan(
+                      text: 'Don\'t have an account?',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 12.0,
+                        color: Colors.black,
+                      ),
+                      children: [
+                        TextSpan(
+                            text: 'Sign up',
+                            style: TextStyle(
+                                decoration: TextDecoration.underline,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14.0,
+                                color: Colors.black))
+                      ]),
                 ),
               ),
             ],
